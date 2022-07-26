@@ -74,3 +74,7 @@ Exercises use emoji to express various different things:
 - ✅ - Hooray! The type error was fixed.
 - 🚁 - Hover over something.
 - 🔮 - Do a go-to-definition.
+
+## License
+
+This material is available for private, non-commercial use under the [GPL version 3](http://www.gnu.org/licenses/gpl-3.0-standalone.html).
