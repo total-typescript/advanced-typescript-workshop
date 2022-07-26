@@ -1,8 +1,8 @@
-export const createComponent = <TComponent extends Record<string, string>>(
-  component: TComponent,
+export const createComponent = <TConfig extends Record<string, string>>(
+  config: TConfig,
 ) => {
-  return (variant: keyof TComponent, ...otherClasses: string[]): string => {
-    return [component[variant], otherClasses].join(" ");
+  return (variant: keyof TConfig, ...otherClasses: string[]): string => {
+    return [config[variant], otherClasses].join(" ");
   };
 };
 
@@ -11,4 +11,4 @@ const getButtonClasses = createComponent({
   secondary: "bg-green-300",
 });
 
-const classes = getButtonClasses("primary");
+const classes = getButtonClasses("primary", "px-4 py-2");

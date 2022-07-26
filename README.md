@@ -60,7 +60,7 @@ Each exercise follows a similar pattern:
 
 - Look at the file with the `*.code.ts` extension. This gives you the code we're going to be working through and trying to understand.
 - Read through the `*.exercise.ts` file. Read through the file, comment-by-comment, and follow the instructions by editing the file inline.
-- Wherever you see reference to `Solution #1`, check the `*.solutions.ts` file if you need to check the solution.
+- Wherever you see reference to `Solution #1`, check the `*.solutions.ts` file when you want to see the solution. **Make sure you check the solution before proceeding!** There's often crucial information there.
 
 ### Emoji
 
