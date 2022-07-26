@@ -17,12 +17,12 @@ The plan of the workshop is to get you more confident with complex type signatur
 
 We'll be running from 9AM PT - 2PM PT. Here's the plan:
 
-- **09:00-9:15**: Setup & Housekeeping
-- **09:15-10:30**: First session
-- **10:30-10:45**: Coffee Break
-- **10:45-12:00**: Second session
-- **12:00-12:30**: Lunch
-- **12:30-14:00**: Third session
+- 09:00-9:15: **Setup & Housekeeping**
+- 09:15-10:30: **First session**
+- 10:30-10:45: **Coffee Break**
+- 10:45-12:00: **Second session**
+- 12:00-12:30: **Lunch**
+- 12:30-14:00: **Third session**
 
 We'll be working through the material in this repository, mostly in small groups.
 
