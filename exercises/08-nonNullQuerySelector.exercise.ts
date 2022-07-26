@@ -286,3 +286,48 @@ const bodyElem = document.querySelector("body");
  *
  * Solution #5
  */
+
+/**
+ * 🛠 Add an overload to nonNullQuerySelector which matches
+ * document.querySelector.
+ *
+ * You'll need to use HTMLElementTagNameMap, and you'll need a
+ * generic.
+ *
+ * Docs: https://www.typescriptlang.org/docs/handbook/2/functions.html#function-overloads
+ *
+ * Solution #6
+ *
+ * ✅ Incredibly, the error disappeared.
+ */
+
+/**
+ * 🚁 Hover result:
+ *
+ * const result = nonNullQuerySelector("body");
+ *       ^ 🚁
+ *
+ * The result is HTMLBodyElement! Which means that:
+ *
+ * console.log(e.gamepad);
+ *             ^ 🚁
+ *
+ * e is GamepadEvent! Which, as we know, has the gamepad
+ * property on it.
+ */
+
+/**
+ * 💡 Sometimes, type errors are not as they appear. This one
+ * took us through function overloads, a deep dive into
+ * lib.dom.d.ts, and generics. It turned out that the fix
+ * was in a whole other section than the highlighted error.
+ */
+
+/**
+ * 🕵️‍♂️ Stretch goal 1: Add another overload which uses
+ * SVGElementTagNameMap to handle SVG elements, and test
+ * that it works using:
+ *
+ * const clipPathElement = nonNullQuerySelector('clipPath');
+ *       ^ 🚁 Should be SVGClipPathElement
+ */

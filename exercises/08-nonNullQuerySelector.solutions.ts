@@ -75,4 +75,18 @@
  * widest third overload of document.querySelector, meaning that
  * the elements we return will always be Element, never
  * HTMLBodyElement.
+ *
+ * querySelector<E extends Element = Element>(selectors: string): E | null;
+ *
+ * 💡 In order to overcome this problem, we're going to need to
+ * mirror document.querySelector's overloads with
+ * nonNullQuerySelector. Otherwise, we'll always just trigger
+ * that last overload and our inference won't work.
+ *
+ * #6
+ *
+ * export function nonNullQuerySelector<K extends keyof HTMLElementTagNameMap>(
+ *   tag: K,
+ * ): HTMLElementTagNameMap[K];
+ * export function nonNullQuerySelector(tag: string) {
  */
