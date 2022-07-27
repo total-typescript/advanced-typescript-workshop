@@ -112,7 +112,11 @@ export const canUserAccess = (role: Role, action: Action) => {
  *      ^ 🚁
  *
  * 🚁 Hover Action. Now, we're getting ALL members of ALL of the arrays.
- * Fabulous.
+ *
+ * 🕵️‍♂️ Discuss amongst yourselves WHY you think [number] works. When you
+ * think you've figured something out, check:
+ *
+ * Solution #1
  */
 
 /**
@@ -185,22 +189,12 @@ export const canUserAccess = (role: Role, action: Action) => {
  * possibleActions.includes(action as any)
  *
  * It works? Nice.
- */
-
-/**
- * 💡 Often, when doing more advanced typings, you're going to find
- * that casting to any is the most productive solution in your arsenal.
- * Many libraries doing advanced TS work, like TRPC and Zod, use 'any'
- * liberally.
  *
- * Because TypeScript is fundamentally not a sound type system (because
- * JavaScript itself is unsound), you will occasionally need to use any's
- * in _some places_ in your apps. My opinion is that the best place for
- * them is hidden away in useful functions, like the one above. Any's for
- * the function creator, not the function consumer.
+ * 🕵️‍♂️ Discuss amongst yourselves: is this a good solution? What
+ * problems could you imagine coming up against for this? Should
+ * any _ever_ be used?
  *
- * For the curious - yes, I found a different solution -
- * ReadonlyArray<Action> - which I'll explain in the break.
+ * For my thoughts, see Solution 2:
  */
 
 /**
