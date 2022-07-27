@@ -264,8 +264,24 @@ export const onSubmit = async (values: { email: string }) => {
  * for plenty of type magic on their own, but when combined with opaque types
  * that can be extremely useful.
  *
- * 🕵️‍♂️ Discuss what you might use opaque types for. Some ideas:
+ */
+
+/**
+ * 🕵️‍♂️ Stretch goal 1:
  *
- * - Ensuring a user exists in the database before acting on it
- * - Separating out different types of entity ids (PostId, UserId)
+ * Create two Opaque types - one called PostId, another called UserId.
+ * Create two functions - getPostById and getUserById. Make each only
+ * take their specific types of id as a parameter.
+ *
+ * Try calling getUserById("123"); You'll notice that you get an error:
+ *
+ * Argument of type 'string' is not assignable to parameter of type 'UserId'.
+ *
+ * Discuss the best way to solve this. You could consider:
+ *
+ * A type predicate.
+ * Casting using as.
+ * An assertion function.
+ *
+ * Solution #1
  */
