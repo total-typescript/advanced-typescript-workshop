@@ -19,8 +19,7 @@ export const fetchUserWithFullName = async (
   ...args: Parameters<typeof fetchUser>
 ): Promise<Awaited<ReturnType<typeof fetchUser>> & { fullName: string }> => {
   /**
-   * 💡 Ouch, that's a lot of generics in a row. Discuss among
-   * your group what you think this big mess of generics means.
+   * 💡 Ouch, that's a lot of generics in a row.
    */
   const user = await fetchUser(...args);
   return {
@@ -47,18 +46,19 @@ export const fetchUserWithFullName = async (
  * 💡 This is our first intro to generic code - and a lot of it
  * can look like this: Something<SomethingElse<Wow<Deeper<Ok>>>>.
  *
- * 🧑‍💻 There's a reason we went for this approach. Take a look at
- * the type definitions for external-lib.
+ * 🧑‍💻 There's a reason we went for this approach. There's something
+ * annoying about the type definitions for external-lib.
  *
  * 🔮 Do a go-to-definition on fetchUser:
  *
  * import { fetchUser } from "external-lib";
  *          ^ 🔮
  *
- * You'll see that the only type definition here is a single function.
- * There isn't any code like this:
+ * You'll see that the only type definition here is a single
+ * function. There aren't any type defs for the return types
+ * or parameters of the functions. I.e:
  *
- * interface User {
+ * interface FetchUserReturnType {
  *   id: string;
  *   firstName: string;
  *   lastName: string;
@@ -66,7 +66,8 @@ export const fetchUserWithFullName = async (
  * }
  *
  * This is an issue, because we need that information if we're going
- * to extend it with `& { fullName: string }`.
+ * to extend it with `& { fullName: string }` for our wrapper
+ * function.
  */
 
 /**
@@ -84,6 +85,8 @@ export const fetchUserWithFullName = async (
 
 /**
  * 🛠 We can extract the value of the promise with Awaited:
+ *
+ * https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-5.html#the-awaited-type-and-promise-improvements
  *
  * type FetchUserReturnType = Awaited<ReturnType<typeof fetchUser>>;
  *      ^ 🚁
@@ -128,6 +131,7 @@ export const fetchUserWithFullName = async (
  * 🧑‍💻 There's one more thing to think about, too. We're currently only
  * using one function from 'external-lib', fetchUser. But that's because
  * we're at the start of the project.
+ *
  * We'll likely end up using 10-12 functions from that lib, so this code
  * might be duplicated many times if we want to add extra parameters to
  * the output.
@@ -383,4 +387,48 @@ export const fetchUserWithFullName = async (
  *
  * We've also seen how some clever inference can get you out of
  * tight spots when library typings aren't terribly helpful.
+ */
+
+/**
+ * 🕵️‍♂️ Stretch goal 1: Create a fetchPostWithMeta function which:
+ *
+ * Calls fetchPost and adds
+ *
+ * { meta: { title: title, description: body } }
+ *
+ * to the output.
+ *
+ * Use the existing WrapFunction to give it a type definition.
+ *
+ * Solution #1
+ */
+
+const fetchPost = (id: string) => {
+  return Promise.resolve({
+    id,
+    title: "Title",
+    body: "Great post",
+  });
+};
+
+/**
+ * 🕵️‍♂️ Stretch goal 2: Given the function below, get a union
+ * type of all of its parameters.
+ *
+ * Solution #2
+ */
+
+const funcWithManyParameters = (
+  a: string,
+  b: string,
+  c: number,
+  d: boolean,
+) => {
+  return [a, b, c, d].join(" ");
+};
+
+type FuncParamsAsUnion = any;
+/**  ^ 🚁
+ *
+ * 🚁 This should be string | number | boolean
  */
