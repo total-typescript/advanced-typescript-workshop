@@ -64,7 +64,7 @@ Each exercise follows a similar pattern:
 
 Be careful to read through each part of the exercise carefully - if you skip over parts of them, it might get difficult to find your way back.
 
-Also, consider having the `*.exercise.ts` in one IDE panel and the `*.code.ts` in another. This will mean you don't have to scroll up and down too much.
+Also, consider **splitting your IDE into two panels**, both looking at the same file. You can read from one, and write in the other - meaning you don't have to scroll up and down too much.
 
 ### Emoji
 
