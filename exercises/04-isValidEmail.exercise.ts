@@ -263,7 +263,6 @@ export const onSubmit = async (values: { email: string }) => {
  * We also covered type predicates and assertion functions. They can be used
  * for plenty of type magic on their own, but when combined with opaque types
  * that can be extremely useful.
- *
  */
 
 /**
