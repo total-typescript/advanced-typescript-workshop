@@ -170,14 +170,10 @@ const usage = async () => {
 
 /**
  * 🛠 We're going to build this up again from scratch. To
- * get started, comment out DbSeeder AND usage above, and
- * uncomment DbSeeder and usage below:
+ * get started, comment out DbSeeder AND usage. Add the
+ * commented-out code above INSTEAD and uncomment it.
  */
 
-/**
- * 💡 Note that DbSeeder is no longer generic. Neither
- * are addUser and addPost.
- */
 // export class DbSeeder {
 //   public users: DbShape["users"] = {};
 //   public posts: DbShape["posts"] = {};

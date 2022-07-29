@@ -32,9 +32,8 @@ const routes = makeRouter({
   },
 });
 
+routes.goTo("/");
 routes.goTo("/dashboard", {
   page: "1",
   something: "",
 });
-
-routes.goTo("/");

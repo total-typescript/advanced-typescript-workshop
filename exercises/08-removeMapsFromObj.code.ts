@@ -25,5 +25,3 @@ export const removeMapsPrefixFromObj = <TObj>(
   }
   return newObj;
 };
-
-const newObj = removeMapsPrefixFromObj({ "maps:longitude": 12 });
