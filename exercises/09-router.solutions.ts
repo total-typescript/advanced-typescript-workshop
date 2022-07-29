@@ -4,11 +4,25 @@
  * 💡 First, you can't pass an invalid route to the
  * first argument.
  *
+ * const routes = makeRouter({
+ *   "/": {},
+ * });
+ *
+ * routes.goTo("/users");
+ *             ^ ⛔️
+ *
  * Second, you get autocomplete on the search parameters
  * that you specify in the array in makeRoutes.
  *
- * Third, you can't pass a search parameter if the route
- * in question doesn't have a search: [].
+ * Third, you can't pass a second argument to routes.goTo at
+ * all if you haven't specified a search param on that route.
+ *
+ * const routes = makeRouter({
+ *   "/": {},
+ * });
+ *
+ * routes.goTo("/", {});
+ *                  ^ ⛔️
  *
  * #2
  *

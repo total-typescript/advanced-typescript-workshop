@@ -77,8 +77,8 @@ routes.goTo("/dashboard", {
   something: "",
 });
 /**
- * 🕵️‍♂️ Investigate routes.goTo above. See if you notice all
- * of the cool bits of this API.
+ * 🕵️‍♂️ Investigate routes.goTo above. Discuss amongst yourselves to
+ * see if you can spot all of the ways that routes.goTo is type-safe.
  *
  * Solution #1
  */

@@ -59,7 +59,7 @@ Exercises are in the [`./exercises`](./exercises) folder. They're designed to be
 Each exercise follows a similar pattern:
 
 - Look at the file with the `*.code.ts` extension. This gives you the code we're going to be working through and trying to understand.
-- Read through the `*.exercise.ts` file. Read through the file, comment-by-comment, and follow the instructions by **editing the file inline**.
+- Read through the `*.exercise.ts` file. Read through the file, comment-by-comment, and follow the instructions by either editing the file inline, or editing the `*.code.ts` file.
 - Wherever you see reference to `Solution #1`, check the `*.solutions.ts` file when you want to see the solution. **Make sure you check the solution before proceeding!** There's often crucial information there.
 
 Be careful to read through each part of the exercise carefully - if you skip over parts of them, it might get difficult to find your way back.
