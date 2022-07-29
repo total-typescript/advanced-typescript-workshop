@@ -1,8 +1,13 @@
 /**
- * 💡 In this example, our backend is using a slightly
- * different enum to us. So we've build a map to be able
- * to easily access the backend enum (in SCREAMING_SNAKE_CASE)
- * to frontend (in camelCase)
+ * 🧑‍💻 We're building a scheduling app for a large HR company.
+ * We built our backends and frontends separately, but there
+ * was a bit of miscommunication about the enums we would use
+ * to represent different bookings. The backend is now using
+ * SCREAMING_SNAKE_CASE, but we're using camelCase.
+ *
+ * So we've made a map to convert from the backend version of
+ * ProgramMode - GROUP, ANNOUNCEMENT etc - to the frontend
+ * version - group, announcement etc.
  */
 
 export const programModeEnumMap = {
