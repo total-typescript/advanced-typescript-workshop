@@ -65,8 +65,8 @@ export type GroupProgram = ProgramMap["GROUP"];
  */
 
 /**
- * 💡 This code is just JavaScript - except for a little extra
- * annotation: "as const"
+ * 💡 The remaining code is just JavaScript - except for a
+ * little extra annotation: "as const"
  *
  * https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-4.html#const-assertions
  *
