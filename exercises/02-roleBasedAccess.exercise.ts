@@ -132,7 +132,7 @@ export const canUserAccess = (role: Role, action: Action) => {
  * Argument of type '"update-self" | "view" | "create" | "update-any"
  * | "delete"' is not assignable to parameter of type '"view"'.
  *
- * To understand this error, we're going to have to pretty deep.
+ * To understand this error, we will have to dig pretty deep.
  *
  * 🚁 Let's look at our UserAccessModelValues type again.
  *
