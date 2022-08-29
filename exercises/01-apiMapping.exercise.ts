@@ -230,6 +230,6 @@ export type GroupProgram = ProgramMap["GROUP"];
  * index types via unions.
  *
  * 🕵️‍♂️ Try experimenting with programModeEnumMap, changing the keys
- * and values to see what errors, or what changes in the each of
+ * and values to see what errors, or what changes in each of
  * the derived types.
  */

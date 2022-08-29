@@ -170,7 +170,7 @@ export const fetchUserWithFullName = async (
  */
 
 /**
- * 💡 But how do we want to transform it? We want to be keep the same
+ * 💡 But how do we want to transform it? We want to keep the same
  * parameters, but be able to add additional properties to what gets
  * resolved from the promise.
  *

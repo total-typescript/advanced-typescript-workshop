@@ -132,7 +132,7 @@ export const canUserAccess = (role: Role, action: Action) => {
  * Argument of type '"update-self" | "view" | "create" | "update-any"
  * | "delete"' is not assignable to parameter of type '"view"'.
  *
- * To understand this error, we're going to have to pretty deep.
+ * To understand this error, we will have to dig pretty deep.
  *
  * 🚁 Let's look at our UserAccessModelValues type again.
  *
@@ -143,7 +143,7 @@ export const canUserAccess = (role: Role, action: Action) => {
  * When we call .includes, we're calling it on userAccessModel[role] -
  * which is exactly the same type as UserAccessModelValues.
  *
- * 🕵️‍♂️ Refactor the function so that saves userAccessModel[role]
+ * 🕵️‍♂️ Refactor the function so that it saves userAccessModel[role]
  * into its own variable before calling includes on it.
  *
  * const possibleActions = userAccessModel[role];
