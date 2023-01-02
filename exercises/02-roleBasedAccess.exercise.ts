@@ -102,7 +102,7 @@ export const canUserAccess = (role: Role, action: Action) => {
  * 💡 Now, we could do the same thing as we did in the apiMapping
  * exercise, by specifying all of the pieces we want from the arrays:
  *
- * type Action = UserAccessModelValues[0 | 1 | 2 | 3];
+ * type Action = UserAccessModelValues[0 | 1 | 2 | 3 | 4];
  *
  * But there's a more elegant solution for accessing _all_ the keys:
  *
