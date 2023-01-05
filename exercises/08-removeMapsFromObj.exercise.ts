@@ -56,7 +56,7 @@ type RemoveMaps<TString> = TString extends `maps:${infer TSuffix}`
  */
 
 export const removeMapsPrefixFromObj = <TObj>(
-  obj: TObj,
+  obj: TObj
 ): RemoveMapsPrefixFromObj<TObj> => {
   const newObj = {} as any;
   /**               ^ 🕵️‍♂️
@@ -354,7 +354,7 @@ type Data = GetData<{ data: number }>;
  * 💡 It takes a <TObj> generic, meaning that anything passed to
  * it can be manipulated and used in the output.
  *
- * 💡 The return type is our our RemoveMapsPrefixFromObj type,
+ * 💡 The return type is our RemoveMapsPrefixFromObj type,
  * which is being called on TObj.
  *
  * 🕵️‍♂️ There's an 'as any' sticking out like a sore thumb. Try
