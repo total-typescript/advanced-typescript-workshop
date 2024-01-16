@@ -5,8 +5,8 @@ const userAccessModel = {
 } as const;
 
 export type Role = keyof typeof userAccessModel;
-export type Action = typeof userAccessModel[Role][number];
+export type Action<R extends Role> = typeof userAccessModel[R][number];
 
-export const canUserAccess = (role: Role, action: Action) => {
-  return (userAccessModel[role] as ReadonlyArray<Action>).includes(action);
+export const canUserAccess = <R extends Role>(role: R, action: Action<R>) => {
+  return (userAccessModel[role] as ReadonlyArray<Action<R>>).includes(action);
 };
